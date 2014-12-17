@@ -13,7 +13,7 @@ function bbpress_reply_with_shift_enter_enqueue() {
 
 		if ( is_singular('topic') ) {
 			//Enqueue the bbPress reply shortcut script (Only in the topic post type)
-			wp_enqueue_script( 'bbpress_reply_keyboard_shortcut', plugin_dir_url( __FILE__ ) . 'bbpress-reply-shift-enter.js', array( 'jquery' ) );
+			wp_enqueue_script( 'bbpress_reply_keyboard_shortcut', plugin_dir_url( __FILE__ ) . 'bbpress-reply-shift-enter.js' );
 
 		}
 
