@@ -3,10 +3,10 @@
  */
 
 window.onload = function () {
-    jQuery.getElementById("bbpress-forums").onkeydown = function (submit) {
+    document.getElementById("bbpress-forums").onkeydown = function (submit) {
 
         if (submit.keyCode == 13 && submit.shiftKey) {
-            jQuery.getElementById("bbp_reply_submit").click();
+            document.getElementById("bbp_reply_submit").click();
             return false;
         }
     }
