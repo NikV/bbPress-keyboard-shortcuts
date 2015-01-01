@@ -5,7 +5,7 @@
  * Author: Nikhil Vimal
  * Author URI: http://nik.techvoltz.com
  * Version: 1.0
- * Plugin URI:
+ * Plugin URI: https://github.com/NikV/bbPress-shift-enter
  * License: GNU GPLv2+
  */
 
