@@ -2,7 +2,7 @@
  * Javascript file for bbPress keyboard shortcut to reply
  */
 window.addEventListener = function () {
-    document.getElementById("bbpress-forums").onkeydown = function (submit) {
+    document.getElementById("bbp_reply_content").onkeydown = function (submit) {
 
         if ( submit.keyCode == 13 && submit.metaKey ) {
             document.getElementById("bbp_reply_submit").click();
