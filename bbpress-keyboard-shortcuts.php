@@ -14,9 +14,29 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+function bbpress_keyboard_shortcuts_check_bbpress() {
+
+	if ( ! is_plugin_active( 'bbpress/bbpress.php' ) ) {
+		//plugin is activated
+		function my_admin_notice() {
+			?>
+			<div class="error">
+				<p><?php echo "You need to activate bbPress in order for keyboard shortcuts to work" ?></p>
+			</div>
+		<?php
+		}
+
+		add_action( 'admin_notices', 'my_admin_notice' );
+	}
+}
+add_action('init', 'bbpress_keyboard_shortcuts_check_bbpress');
+
+
 function bbpress_keyboard_shortcuts_enqueue() {
+
 		//Enqueue the bbPress reply shortcut script (Only in the topic post type)
 		wp_enqueue_script( 'bbpress_reply_keyboard_shortcut', plugin_dir_url( __FILE__ ) . 'bbpress-keyboard-shortcut-reply.js' );
+
 
 }
 add_action('wp_enqueue_scripts','bbpress_keyboard_shortcuts_enqueue');
