@@ -1,5 +1,5 @@
 /**
- * Javascript file for bbPress keyboard shortcuts
+ * Javascript file for bbPress Shift+Enter
  */
 window.addEventListener = function () {
     document.getElementById("bbp_reply_content").onkeydown = function (submit) {

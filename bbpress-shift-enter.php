@@ -10,15 +10,9 @@
  */
 
 function bbpress_keyboard_shortcuts_enqueue() {
-
-		if ( is_singular('topic') ) {
-			//Enqueue the bbPress reply shortcut script (Only in the topic post type)
-			wp_enqueue_script( 'bbpress_reply_keyboard_shortcut', plugin_dir_url( __FILE__ ) . 'bbpress-keyboard-shortcut-reply.js' );
-
-		}
-
-
-	}
+		//Enqueue the bbPress reply shortcut script (Only in the topic post type)
+		wp_enqueue_script( 'bbpress_reply_keyboard_shortcut', plugin_dir_url( __FILE__ ) . 'bbpress-keyboard-shortcut-reply.js' );
+}
 add_action('wp_enqueue_scripts','bbpress_keyboard_shortcuts_enqueue');
 
 function after_reply_content_shortcut_activated() {
