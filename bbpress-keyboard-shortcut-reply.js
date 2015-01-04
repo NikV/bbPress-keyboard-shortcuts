@@ -11,8 +11,6 @@ window.addEventListener = function () {
 
             else if (submit.keyCode == 13 && submit.ctrlKey) {
                 document.getElementById("bbp_reply_submit").click();
-
-
             }
         }
     }
