@@ -1,4 +1,4 @@
-bbPress Reply Keyboard Shortcuts
+bbPress Keyboard Shortcuts
 ===================
 
 bbPress keyboard shortcut plugin to simply publish replies. Pretty simple.
