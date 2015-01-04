@@ -2,16 +2,18 @@
  * Javascript file for bbPress Shift+Enter
  */
 window.addEventListener = function () {
-    document.getElementById("bbp_reply_content").onkeydown = function (submit) {
+    if (document.getElementById("bbp_reply_content")) {
+        document.getElementById("bbp_reply_content").onkeydown = function (submit) {
 
-        if ( submit.keyCode == 13 && submit.metaKey ) {
-            document.getElementById("bbp_reply_submit").click();
-        }
+            if (submit.keyCode == 13 && submit.metaKey) {
+                document.getElementById("bbp_reply_submit").click();
+            }
 
-        else if ( submit.keyCode == 13 && submit.ctrlKey ) {
-            document.getElementById("bbp_reply_submit").click();
+            else if (submit.keyCode == 13 && submit.ctrlKey) {
+                document.getElementById("bbp_reply_submit").click();
 
 
+            }
         }
     }
 }
