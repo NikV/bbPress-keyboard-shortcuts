@@ -9,7 +9,7 @@
  * License: GNU GPLv2+
  */
 
-function bbpress_reply_with_shift_enter_enqueue() {
+function bbpress_reply_keyboard_shortcuts_enqueue() {
 
 		if ( is_singular('topic') ) {
 			//Enqueue the bbPress reply shortcut script (Only in the topic post type)
@@ -19,7 +19,7 @@ function bbpress_reply_with_shift_enter_enqueue() {
 
 
 	}
-add_action('wp_enqueue_scripts','bbpress_reply_with_shift_enter_enqueue');
+add_action('wp_enqueue_scripts','bbpress_reply_keyboard_shortcuts_enqueue');
 
 function after_reply_content_shortcut_activated() {
 	echo "You can use CTRL + Enter or CMD + Enter to submit a reply.";
