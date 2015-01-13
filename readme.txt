@@ -6,3 +6,17 @@ Tested up to: 4.1
 Stable tag: 1.0
 License: GNU GPLv2+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+Ever wanted keyboard shortcuts with bbPress?
+
+
+== Description ==
+
+This plugin gives you keyboard shortcuts to easily use with bbPress.
+
+Keyboard Shortcuts Included:
+
+- CMD + Enter
+- Control + Enter
+
+
