@@ -1,5 +1,5 @@
 /**
- * Javascript file for bbPress Shift+Enter
+ * Javascript file for bbPress Keyboard Shortcuts
  */
 window.addEventListener = function () {
     if (document.getElementById("bbp_reply_content")) {
