@@ -14,6 +14,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
+//Is bbPress active? If not, let's nag the user.
 function bbpress_keyboard_shortcuts_check_bbpress() {
 
 	if ( ! is_plugin_active( 'bbpress/bbpress.php' ) ) {
@@ -41,7 +42,11 @@ function bbpress_keyboard_shortcuts_enqueue() {
 }
 add_action('wp_enqueue_scripts','bbpress_keyboard_shortcuts_enqueue');
 
+//Short instructions so the user realizes the shortcuts are active
 function after_reply_content_shortcut_activated() {
 	echo "You can use CTRL + Enter or CMD + Enter to submit a reply.";
 }
 add_action('bbp_theme_after_reply_form_content', 'after_reply_content_shortcut_activated');
+
+
+
