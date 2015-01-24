@@ -18,8 +18,8 @@ if ( ! defined( 'WPINC' ) ) {
 function bbpress_keyboard_shortcuts_check_bbpress() {
 
 	if ( ! is_plugin_active( 'bbpress/bbpress.php' ) ) {
-		//plugin is activated
-		function my_admin_notice() {
+		//Check if plugin is activated
+		function bbpress_keyboard_shortcuts_notice() {
 			?>
 			<div class="error">
 				<p><?php echo "You need to activate bbPress in order for keyboard shortcuts to work" ?></p>
@@ -27,7 +27,7 @@ function bbpress_keyboard_shortcuts_check_bbpress() {
 		<?php
 		}
 
-		add_action( 'admin_notices', 'my_admin_notice' );
+		add_action( 'admin_notices', 'bbpress_keyboard_shortcuts_notice' );
 	}
 }
 add_action('init', 'bbpress_keyboard_shortcuts_check_bbpress');
