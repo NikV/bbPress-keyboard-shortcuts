@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: bbPress Keyboard Shortcuts
- * Description: Use CMD + enter or Control + enter when you finish writing a reply and watch it be published!
+ * Description: Keyboard shortcuts for your bbPress install.
  * Author: Nikhil Vimal
  * Author URI: http://nik.techvoltz.com
  * Version: 1.0
