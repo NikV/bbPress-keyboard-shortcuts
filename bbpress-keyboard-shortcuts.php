@@ -14,7 +14,11 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-//Is bbPress active? If not, let's nag the user.
+/**
+ * Let's check if bbPress is active, if not, let's nag the user.
+ *
+ * @since 1.0
+ */
 function bbpress_keyboard_shortcuts_check_bbpress() {
 
 	if ( ! is_plugin_active( 'bbpress/bbpress.php' ) ) {
@@ -32,7 +36,11 @@ function bbpress_keyboard_shortcuts_check_bbpress() {
 }
 add_action('init', 'bbpress_keyboard_shortcuts_check_bbpress');
 
-
+/**
+ * Enqueue ALL the JS
+ *
+ * @since 1.0
+ */
 function bbpress_keyboard_shortcuts_enqueue() {
 
 		//Enqueue the bbPress reply shortcut script (Only in the topic post type)
@@ -42,7 +50,11 @@ function bbpress_keyboard_shortcuts_enqueue() {
 }
 add_action('wp_enqueue_scripts','bbpress_keyboard_shortcuts_enqueue');
 
-//Short instructions so the user realizes the shortcuts are active
+/**
+ * Short instructions so the user realizes the shortcuts are active
+ *
+ * Currently a work in progress, as there will be more shortcuts
+ */
 function after_reply_content_shortcut_activated() {
 	echo "You can use CTRL + Enter or CMD + Enter to submit a reply.";
 }
