@@ -43,9 +43,8 @@ add_action('init', 'bbpress_keyboard_shortcuts_check_bbpress');
  */
 function bbpress_keyboard_shortcuts_enqueue() {
 
-		//Enqueue the bbPress reply shortcut script (Only in the topic post type)
+	//Enqueue the bbPress reply shortcut script (Only in the topic post type)
 	wp_enqueue_script( 'bbpress_reply_keyboard_shortcut', plugin_dir_url( __FILE__ ) . 'bbpress-keyboard-shortcut-reply.js' );
-
 
 }
 add_action('wp_enqueue_scripts','bbpress_keyboard_shortcuts_enqueue');
